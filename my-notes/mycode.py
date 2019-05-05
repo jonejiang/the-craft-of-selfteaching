@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 def is_prime(n):
     """
     Return a boolean value based upon
@@ -7,11 +10,12 @@ def is_prime(n):
         return False
     if n == 2:
         return True
-    for m in range(2, int(n ** 0.5) + 1 ):
+    for m in range(2, int(n ** 0.5) + 1):
         if (n % m) == 0:
             return False
     else:
         return True
+
 
 def say_hi(*names, greeting='Hello', capitalized=False):
     """
@@ -25,3 +29,12 @@ def say_hi(*names, greeting='Hello', capitalized=False):
         if capitalized:
             name = name.capitalzed()
         print(f'{greeting}, {name}!')
+
+
+def main(n):
+    is_prime(n)
+    say_hi('miake', 'jim')
+
+
+if __name__ == "__main__":
+    main(9)
